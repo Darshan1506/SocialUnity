@@ -10,9 +10,11 @@ interface Props {
 const ThreadsTab = async ({ currentUserId, accountId, accountType }: Props) => {
   let result = await fetchUserPosts(accountId);
   if (!result) redirect("/");
+  console.log(result.threads)
   return (
     <section className="mt-9 flex flex-col gap-10">
       {result.threads.map((thread: any) => (
+        
         <ThreadCard
           key={thread._id}
           id={thread._id}

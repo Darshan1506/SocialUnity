@@ -40,7 +40,7 @@ export async function createCommunity(
     // Update User model
     user.communities.push(createdCommunity._id);
     await user.save();
-
+    
     return createdCommunity;
   } catch (error) {
     // Handle any errors
