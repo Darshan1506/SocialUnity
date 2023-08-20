@@ -25,7 +25,7 @@ function LeftSidebar() {
               <Image
                 src={link.imgURL}
                 alt={link.label}
-                height={24}
+                height={28}
                 width={24}
               />
               <p className="text-light-1 max-lg:hidden">{link.label}</p>

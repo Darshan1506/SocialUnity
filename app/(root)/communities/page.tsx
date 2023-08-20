@@ -23,6 +23,8 @@ const Page = async () => {
     pageNumber: 1,
     pageSize: 25,
   });
+
+  
   return (
     <section>
       <h1 className="head-text mb-10">Communities</h1>

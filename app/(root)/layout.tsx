@@ -6,13 +6,14 @@ import Topbar from "@/components/shared/Topbar";
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import RightSidebar from "@/components/shared/RightSidebar";
 import Bottombar from "@/components/shared/Bottombar";
+import { HMSRoomProvider } from "@100mslive/react-sdk";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'SocialUnity',
-  description:'A nextjs 13 Meta SocialUnity application'
-}
+  title: "SocialUnity",
+  description: "A nextjs 13 Meta SocialUnity application",
+};
 
 export default function RootLayout({
   children,
@@ -23,18 +24,16 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <Topbar/>
+          <Topbar />
 
-            <main className="flex flex-row">
-              <LeftSidebar/>
-              <section className="main-container">
-                <div className="w-full max-w-4xl">
-                  {children}
-                </div>
-              </section>
-              <RightSidebar/>
-            </main>
-            <Bottombar/>
+          <main className="flex flex-row">
+            <LeftSidebar />
+            <section className="main-container">
+              <div className="w-full max-w-4xl">{children}</div>
+            </section>
+            <RightSidebar />
+          </main>
+          <Bottombar />
         </body>
       </html>
     </ClerkProvider>
