@@ -14,7 +14,7 @@ const SidebarCard = ({ id, name, username, imgUrl }: Props) => {
   const router = useRouter();
   return (
     <article className="user-card">
-      <Link href={`/profile/${id}`}>
+      <Link href={`/profile/${id}`} className="transition duration-300 ease-in-out hover:scale-110">
         <div className="user-card_avatar">
           <Image
             src={imgUrl}

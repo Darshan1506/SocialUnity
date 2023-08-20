@@ -20,7 +20,7 @@ function LeftSidebar() {
             <Link
               href={link.route}
               key={link.label}
-              className={`leftsidebar_link ${isActive && "bg-primary-500"}`}
+              className={`leftsidebar_link ${isActive && "bg-primary-500"} transition duration-300 ease-in-out hover:scale-110`}
             >
               <Image
                 src={link.imgURL}
@@ -28,7 +28,7 @@ function LeftSidebar() {
                 height={28}
                 width={24}
               />
-              <p className="text-light-1 max-lg:hidden">{link.label}</p>
+              <p className="text-light-1 max-lg:hidden ">{link.label}</p>
             </Link>
           );
         })}
